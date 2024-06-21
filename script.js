@@ -48,7 +48,7 @@ function renderTasks() {
     filteredlist.forEach((task) => {
       const li = document.createElement("li"); //li element for task
       li.textContent = task.text;
-      // li.id = `list-${task.id}`;
+      li.id = `list-${task.id}`;
       if (task.completed) {
         li.className = `checked`;
       }
@@ -72,7 +72,7 @@ function renderTasks() {
     todoListManager.tasks.forEach((task) => {
       if (task.id == todoListManager.vars.editedTaskID) {
         const li = document.createElement("li"); //li element for task with editedTaskID
-        // li.id = `list-${task.id}`;
+        li.id = `list-${task.id}`;
         if (task.completed) {
           li.className = `checked`;
         }

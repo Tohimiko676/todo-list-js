@@ -1,18 +1,18 @@
 :root {
-  --white:#fff;
   --orange: #ff5945;
   --darkorange: #f05342;
   --pink: #ec4899;
   --purple: #4e085f;
   --blue: #153677;
   --darkblue: #002765;
-  --lightgray: #eee;
-  --gray: #ec4899;
-  --darkgray: #6b7280;
-  --darkergray: #6b7280;
+  --white: #fff;
+  --white2: #eee;
+  --white3: #edeef0;
+  --gray: #b7b7b7;
+  --gray2: #808080;
+  --gray3: #6b7280;
+  --gray4: #555;
 }
-
-
 
 * {
   margin: 0;
@@ -24,21 +24,21 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #153677, #4e085f);
+  background: linear-gradient(135deg, var(--blue), var(--purple));
   padding: 10px;
 }
 
 .todo-app {
   width: 100%;
   max-width: 540px;
-  background: #fff;
+  background: var(--white);
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
 }
 
 .todo-app h2 {
-  color: #002765;
+  color: var(--darkblue);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #edeef0;
+  background: var(--white3);
   border-radius: 30px;
   padding-left: 10px;
   margin-bottom: 10px;
@@ -70,15 +70,15 @@ button {
   border: none;
   outline: none;
   padding: 16px 50px;
-  background: #ff5945;
-  color: #fff;
+  background: var(--orange);
+  color: var(--white);
   font-size: 16px;
   cursor: pointer;
   border-radius: 30px;
 }
 
-button:hover{
-	background: #f05342;
+button:hover {
+  background: var(--darkorange);
 }
 
 ul {
@@ -91,7 +91,6 @@ ul li {
   padding: 12px 8px 12px 50px;
   user-select: none;
   position: relative;
-  
 }
 
 ul li::before {
@@ -108,7 +107,7 @@ ul li::before {
 }
 
 ul li.checked {
-  color: #555;
+  color: var(--gray4);
   text-decoration: line-through;
 }
 
@@ -123,7 +122,7 @@ ul li span {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  color: #555;
+  color: var(--gray4);
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -136,7 +135,7 @@ ul li span {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  color: #555;
+  color: var(--gray4);
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -152,8 +151,8 @@ li button {
   outline: none;
   margin: 0;
   padding: 10px 40px;
-  background: #ff5945;
-  color: #fff;
+  background: var(--orange);
+  color: var(--white);
   font-size: 16px;
   cursor: pointer;
   border-radius: 30px;
@@ -161,9 +160,8 @@ li button {
   justify-content: center;
 }
 
-
 ul li span:hover {
-  background-color: #edeef0;
+  background-color: var(--white3);
 }
 
 .filters {
@@ -178,10 +176,10 @@ ul li span:hover {
 
 .filters button {
   box-sizing: border-box;
-	height: 22px;
-	line-height: 22px;
+  height: 22px;
+  line-height: 22px;
 
-  color: #b7b7b7;
+  color: var(--gray);
   margin: 10px;
   background-color: transparent;
   border: none;
@@ -195,20 +193,19 @@ ul li span:hover {
 
 .filters button:hover {
   /* border-bottom: 2px solid #ccc; */
-	color: #808080;
+  color: var(--gray2);
 }
 
-
-.clear{
-	display:flex;
-	justify-content: flex-end;
+.clear {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .clear button {
-	box-sizing: border-box;
-	height: 22px;
-	line-height: 22px;
-  color: #b7b7b7;
+  box-sizing: border-box;
+  height: 22px;
+  line-height: 22px;
+  color: var(--gray);
   margin: 10px;
   background-color: transparent;
   border: none;
@@ -218,12 +215,12 @@ ul li span:hover {
   border-radius: 0;
 }
 
-.clear button:hover{
-	color: #808080;
+.clear button:hover {
+  color: var(--gray2);
 }
 
 .filters .selected {
-	color: var(--pink);
+  color: var(--pink);
   background-image: linear-gradient(to right, var(--orange), var(--darkorange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -232,18 +229,15 @@ ul li span:hover {
   pointer-events: none;
 }
 
-
-
-.search-input{
+.search-input {
   flex: 1;
   border: none;
   outline: none;
-  background: #edeef0;
+  background: var(--white3);
   /* background: transparent; */
   padding-left: 20px;
   border-radius: 25px;
   margin-right: 50px;
-
 }
 
 .hidden {
