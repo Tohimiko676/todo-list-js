@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>todo list<img src="/images/icon.png" alt=""></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text"></input>
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <div id="filters-box" class="filters">
+                <input class="search-input" id="search-input" type="text" placeholder="Search..">
+                <button class="selected" id="all" onclick="filterHandler(this.id) ">All</button>
+                <button id="active" onclick="filterHandler(this.id)">Active</button>
+                <button id="completed" onclick="filterHandler(this.id)">Completed</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">task1</li>
+                <li>task2</li>
+                <li>task3</li> -->
+            </ul>
+            <div class="clear">
+                <button id="clearOrCancel" onclick="clearOrCancel()">clear all</button>
+            </div>
+
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
